@@ -1,0 +1,38 @@
+let positieX = 0;
+
+function setup() {
+  createCanvas(600, 400);
+}
+function draw() {
+  background(220);
+  
+
+  for (let y = 0; y < height; y++) {
+    let c = lerpColor(
+      color(255,100,150),
+      color(100,150,255),
+      y/height
+    );
+
+    stroke(c);
+    line(0,y,width,y);
+  }
+
+  //strokeWeight(0);
+  //fill ("#7d95e2")  
+  //square (-1,-1,600)
+  
+  //fill ("#8fa8f3")  
+  //square (-1,50,600)
+  
+  //fill ("#d9c9a5")  
+  //square (-1,340,600)
+  
+  fill ("white")
+  circle (positieX, 200,50)
+  positieX = positieX + 1
+  
+  if (positieX > 600) {
+    positieX = 0;
+  }
+}
